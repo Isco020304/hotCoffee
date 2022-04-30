@@ -1,0 +1,11 @@
+.posts{
+    &_item{
+        margin-top: 43px;
+    }
+    &_title{
+        @include font(700, 20px, $text-gray) ;
+    }
+    &_description{
+        @include font(700, 14px, $text-lightGray) ;
+    }
+}

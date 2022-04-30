@@ -1,0 +1,28 @@
+.actual{
+    margin-top: 39px;
+    &_item{
+        @include  flex(center, space-around, nowrap);
+        border: 1px solid   #e2e2e2;
+        box-shadow: 0 5px 4px rgba(221,221,221,0.25);
+        border-radius: 5px;
+    }
+    &_title{
+        @include font(700, 30px, $text-gray) ;
+    }
+    &_description{
+        @include font(400, 14px, $text-light-Gray) ;
+        margin: 27px 0 30px 0;
+    }
+    &_date{
+        @include font(400, 12px, $text-light-Gray) ;
+    }
+    &_link{
+        @include font(700, 12px, $text-gray) ;
+    }
+    &_bottom{
+        @include  flex(center, space-between, wrap);
+    }
+    &_left{
+        padding: 42px 52px;
+    }
+}

@@ -1,0 +1,81 @@
+.header{
+    padding: 36px 0 25px 0;
+    &_content{
+        @include flex(center, space-between,wrap);
+    }
+    &_list{
+        @include  flex(center, center, wrap);
+    }
+    &_logo{
+        @include font(700, 20px, $text-black) ;
+    }
+    &_input{
+        border: none;
+        margin-left: 12px;
+    }
+    &_label{
+        @include flex(center, center,wrap) ;
+    }
+    &_item{
+        margin-left: 30px;
+    }
+    &_link{
+        @include font(400, 16px, $text-black) ;
+    }
+}
+
+.burger{
+    display: none;
+    position: relative;
+    cursor: pointer;
+    &_list{
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 0;
+    }
+    &_menu{
+        width: 40px;
+        height: 40px;
+        @include flex(center,space-between,wrap)
+    }
+    &_line{
+        background: #000;
+        width: 35px;
+        margin: 0 auto;
+        height: 4px;
+    }
+    &_close{
+        display: none;
+        @include font(600,40px,$text-black);
+        line-height: 0,5;
+    }
+    &_menu.active &_close{
+        display: flex;
+    }
+    &_menu.active &_line{
+        display: none;
+    }
+    &_menu.active ~ &_list{
+        display: block;
+    }
+    .header_item{
+        margin-top: 15px;
+        text-align: center;
+    }
+}
+
+@media screen and(max-width:768px){
+    .burger{
+        display: block;
+    }
+    .header{
+        &_list{
+            display: none;
+        }
+    }
+}
+
+
+
+
